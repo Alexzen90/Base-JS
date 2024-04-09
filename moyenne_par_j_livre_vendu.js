@@ -1,5 +1,5 @@
-let livresVendus = 650
+let livresVendus = 600
 livresVendus += 50
 livresVendusParJour = livresVendus / 7
 
-console.log("Le nombre de livres vendus par jour est " + livresVendusParJour)
+console.log("Le nombre de livres vendus par jour est " + Math.round(livresVendusParJour))
