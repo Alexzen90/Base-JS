@@ -4,4 +4,4 @@ const soldeCompteApresSalaire = soldeCompte + salaire           //Solde après s
 console.log(soldeCompteApresSalaire)
 
 salaire = 1600
-console.log(salaire)
+console.log(salaire) 

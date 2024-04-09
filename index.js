@@ -1,6 +1,6 @@
 let message = "Hello world!"                            //Greetings
 console.log(message)
-message = "Je suis sexy"                                //Unlike Lutfu
+message = "Je suis sexy"                                //Unlike Lutfu 
 console.log(message)
 
 // Exercice 2 : Les opérateurs
