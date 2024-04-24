@@ -107,6 +107,7 @@ for (i = 0; i < data.length; i++) {
 // var plats = data.filter(element => (element.type === "plat"))
 // var assaisonnements = data.filter(element => (element.type === "assaisonnement"))
 // var accompagnements = data.filter(element => (element.type === "accompagnement"))
+var txt = "";
 
 for (i = 0; i < 10; i++) {
   var plat = plats[Math.floor(Math.random() * plats.length)];
@@ -121,23 +122,33 @@ for (i = 0; i < 10; i++) {
   //  en utilisant le spread operator(...) je simplifie les boucles en commentaire ci-dessous  GROS GAIN DE TEMPS
 
   //  var ingredients = []
-  /* for(j = 0; j < plat.ingredients.length - 1; j++) {
+  /* for(j = 0; j < plat.ingredients.length; j++) {
       ingredients.push(plat.ingredients[j])
     }
-    for(j = 0; j < assaisonnement.ingredients.length - 1; j++) {
+    for(j = 0; j < assaisonnement.ingredients.length; j++) {
       ingredients.push(assaisonnement.ingredients[j])
     }
-    for(j = 0; j < accompagnement.ingredients.length - 1; j++) {
+    for(j = 0; j < accompagnement.ingredients.length; j++) {
       ingredients.push("" + accompagnement.ingredients[j])
     } */
   var duration = plat.duration + assaisonnement.duration + accompagnement.duration;
   var recette = {
     nom: `${plat.nom} ${assaisonnement.nom} ${accompagnement.nom}`,
-    ingredients, //Ma variable a le meme nom que la propriété de mon objet donc je n'ai pas besoin d'écrire ingredients: ingredients    JS est smart
-    duration, //Ma variable a le meme nom que la propriété de mon objet donc je n'ai pas besoin d'écrire duration: duration    JS est smart
-    ustensiles, //Ma variable a le meme nom que la propriété de mon objet donc je n'ai pas besoin d'écrire ustensiles: ustensiles    JS est smart
+    ingredients: ingredients.join(', '), 
+    duration, 
+    ustensiles: ustensiles.join(', ') 
   };
   recettes.push(recette);
+  txt += `Nom: ${recette.nom} / Durée: ${recette.duration} / Ingrédients: ${recette.ingredients} / Ustensiles: ${recette.ustensiles}\n`  
 }
 
-console.log(recettes);
+// console.log(recettes);
+
+const fs = require('fs');
+
+var folder_exist = fs.existsSync("recettes")
+if (!folder_exist) {
+  fs.mkdirSync("recettes")
+}
+
+fs.appendFileSync('recettes/recettes.txt', txt)

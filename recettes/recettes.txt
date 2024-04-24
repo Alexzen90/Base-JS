@@ -1,0 +1,30 @@
+Nom: poulet curry salade / Durée: 14 / Ingrédients: poulet, huile, epice curry, salade / Ustensiles: poele, saladier
+Nom: poulet sauce forestier salade / Durée: 14 / Ingrédients: poulet, huile, creme , champignon, beurre, eau, salade / Ustensiles: poele, saladier, mixeur, saladier
+Nom: steak hache paprika riz / Durée: 20 / Ingrédients: steak hache, huile, epice paprika, riz, eau / Ustensiles: poele, concaseur, casserole
+Nom: steak hache paprika riz / Durée: 20 / Ingrédients: steak hache, huile, epice paprika, riz, eau / Ustensiles: poele, concaseur, casserole
+Nom: poulet paprika puree / Durée: 20 / Ingrédients: poulet, huile, epice paprika, pure, lait, eau / Ustensiles: poele, concaseur, casserole
+Nom: poulet sauce forestier frite / Durée: 23 / Ingrédients: poulet, huile, creme , champignon, beurre, eau, patate, huile / Ustensiles: poele, saladier, mixeur, friteuse
+Nom: boeuf paprika riz / Durée: 20 / Ingrédients: viande, huile, epice paprika, riz, eau / Ustensiles: poele, concaseur, casserole
+Nom: boeuf tandoori riz / Durée: 20 / Ingrédients: viande, huile, epice tandoori, riz, eau / Ustensiles: poele, concaseur, casserole
+Nom: saumon sauce forestier puree / Durée: 20 / Ingrédients: saumon, huile, creme , champignon, beurre, eau, pure, lait, eau / Ustensiles: poele, saladier, mixeur, casserole
+Nom: saumon curry riz / Durée: 20 / Ingrédients: saumon, huile, epice curry, riz, eau / Ustensiles: poele, casserole
+Nom: poulet paprika salade / Durée: 14 / Ingrédients: poulet, huile, epice paprika, salade / Ustensiles: poele, concaseur, saladier
+Nom: steak hache tandoori puree / Durée: 20 / Ingrédients: steak hache, huile, epice tandoori, pure, lait, eau / Ustensiles: poele, concaseur, casserole
+Nom: poulet curry riz / Durée: 20 / Ingrédients: poulet, huile, epice curry, riz, eau / Ustensiles: poele, casserole
+Nom: boeuf paprika salade / Durée: 14 / Ingrédients: viande, huile, epice paprika, salade / Ustensiles: poele, concaseur, saladier
+Nom: steak hache curry puree / Durée: 20 / Ingrédients: steak hache, huile, epice curry, pure, lait, eau / Ustensiles: poele, casserole
+Nom: steak hache curry salade / Durée: 14 / Ingrédients: steak hache, huile, epice curry, salade / Ustensiles: poele, saladier
+Nom: steak hache curry frite / Durée: 23 / Ingrédients: steak hache, huile, epice curry, patate, huile / Ustensiles: poele, friteuse
+Nom: poulet sauce forestier riz / Durée: 20 / Ingrédients: poulet, huile, creme , champignon, beurre, eau, riz, eau / Ustensiles: poele, saladier, mixeur, casserole
+Nom: steak hache tandoori puree / Durée: 20 / Ingrédients: steak hache, huile, epice tandoori, pure, lait, eau / Ustensiles: poele, concaseur, casserole
+Nom: poulet sauce forestier frite / Durée: 23 / Ingrédients: poulet, huile, creme , champignon, beurre, eau, patate, huile / Ustensiles: poele, saladier, mixeur, friteuse
+Nom: poulet sauce forestier riz / Durée: 20 / Ingrédients: poulet, huile, creme , champignon, beurre, eau, riz, eau / Ustensiles: poele, saladier, mixeur, casserole
+Nom: poulet tandoori salade / Durée: 14 / Ingrédients: poulet, huile, epice tandoori, salade / Ustensiles: poele, concaseur, saladier
+Nom: boeuf paprika salade / Durée: 14 / Ingrédients: viande, huile, epice paprika, salade / Ustensiles: poele, concaseur, saladier
+Nom: steak hache paprika puree / Durée: 20 / Ingrédients: steak hache, huile, epice paprika, pure, lait, eau / Ustensiles: poele, concaseur, casserole
+Nom: steak hache curry frite / Durée: 23 / Ingrédients: steak hache, huile, epice curry, patate, huile / Ustensiles: poele, friteuse
+Nom: poulet tandoori frite / Durée: 23 / Ingrédients: poulet, huile, epice tandoori, patate, huile / Ustensiles: poele, concaseur, friteuse
+Nom: poulet curry salade / Durée: 14 / Ingrédients: poulet, huile, epice curry, salade / Ustensiles: poele, saladier
+Nom: saumon curry frite / Durée: 23 / Ingrédients: saumon, huile, epice curry, patate, huile / Ustensiles: poele, friteuse
+Nom: boeuf tandoori puree / Durée: 20 / Ingrédients: viande, huile, epice tandoori, pure, lait, eau / Ustensiles: poele, concaseur, casserole
+Nom: poulet tandoori puree / Durée: 20 / Ingrédients: poulet, huile, epice tandoori, pure, lait, eau / Ustensiles: poele, concaseur, casserole
