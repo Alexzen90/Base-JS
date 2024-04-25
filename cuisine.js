@@ -146,6 +146,7 @@ for (i = 0; i < 10; i++) {
 
 const fs = require('fs');
 
+
 var folder_exist = fs.existsSync("recettes")
 if (!folder_exist) {
   fs.mkdirSync("recettes")
