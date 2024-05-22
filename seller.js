@@ -1,7 +1,7 @@
 const { faker } = require('@faker-js/faker');
 const _ = require("lodash")
 
-var number_elements = 10;
+var number_elements = 100;
 var price_min = 5;
 var price_max = 1300;
 var tva_min = 5;
@@ -37,13 +37,13 @@ articles = articles.map(function (e) {
         ...e,
         price_unit_ht: price_ht,
         price_total_ttc: arrondir(e.price_unit_ttc * e.quantity),
-        price_total_ht: arrondir(price_ht*e.quantity)
+        price_total_ht: arrondir(price_ht * e.quantity)
     }
 })
 
 //console.log(articles)
 
-var more_tva_interval = articles.filter(function(e) {
+var more_tva_interval = articles.filter(function (e) {
     return e.tva > 7 && e.tva < 13
 })
 
@@ -55,37 +55,33 @@ for (var i = 0; i < articles.length; i++) {
     }
 }
 
-//console.log(for_tva_more_interval)
-
-let more_total_ttc = articles.filter(e => (e.price_total_ttc > 10000))
-//console.log(more_total_ttc)
-
-let more_quantity = articles.filter(e => (e.quantity > 50))
-//console.log(more_quantity)
 
 articles = articles.map(function (e) {
-  return {...e, id: _.uniqueId()}
+    return { ...e, id: _.uniqueId() }
 })
+
 //console.log(articles)
 
-let number_users = 100
-let users = []
+var number_users = 25
+var users = []
 
-for (let i = 0; i < number_users; i++) {
-  let firstName = faker.person.firstName()
-  let lastName = faker.person.lastName()
-  users.push({
-    username: faker.internet.userName({ firstName: firstName, lastName: lastName }),
-    firstName,
-    lastName,
-    email: faker.internet.email({ firstName: firstName, lastName: lastName }),
-    articles: []
-  })
+for (var i = 0; i < number_users; i++) {
+    let firstName = faker.person.firstName()
+    let lastName = faker.person.lastName()
+    users.push({
+        id: _.uniqueId(),
+        username: faker.internet.userName({
+            firstName: firstName,
+            lastName: lastName
+        }),
+        firstName: firstName,
+        lastName: lastName,
+        email: faker.internet.email({
+            firstName: firstName,
+            lastName: lastName
+        }),
+    })
 }
-///////////////////////////////////////////////////////////////////////////////////////////
-//console.log(users)
-
-
 
 
 let number_max_articles = 10
@@ -97,15 +93,94 @@ users = users.map(function (e) {
     }
     let random_id_number = _.random(0, limit)
     if (random_id_number > 0 && tmp_articles.length > 0) {
-        let id_to_users = []
-        for (let i = 0; i < random_id_number; i++) {
-            let index_to_take = _.random(0, tmp_articles.length - 1)
+        var id_to_users = []
+        for (var i = 0; i < random_id_number; i++) {
+            var index_to_take = _.random(0, tmp_articles.length - 1)
             id_to_users.push(tmp_articles[index_to_take].id)
             tmp_articles.splice(index_to_take, 1)
         }
-        return {...e, articles: id_to_users}
+        return { ...e, articles: id_to_users }
     }
     else {
-        return {...e, articles: []}
+        return { ...e, articles: [] }
     }
 })
+
+//Tableau utilisateur de 25 elements les proriétés sont :
+// username - firstName - lastName - email
+
+// Ajouter une propriete aux utilisateurs "articles" [id.articles] un nombre aléatoire 
+// sans que une un utilisateur est le meme articles qu'un autre
+
+//console.log(articles)
+//articles = []
+
+users = users.map(function (e) {
+    if (e.articles.length > 0) {
+        var depenses = e.articles.map(function (article) {
+            var a = _.find(articles, ["id", article])
+
+            if (a && a['price_total_ttc']) {
+                return a['price_total_ttc']
+            }
+            return 0
+        })
+        var price_depense = _.sum(depenses)
+        e["depenses"] = price_depense
+    }
+    return e
+})
+
+//console.log(users)
+
+/* articles = articles.map(function(article) {
+    for(var i = 0; i < users.length; i++) {
+        var user = users[i]
+        if (_.indexOf(user.articles, article.id) > -1) {
+            article.user_id = user.id
+        }
+    }
+    return article
+}) */
+
+users.forEach(function (user) {
+    user.articles.forEach(function (user_article) {
+        var index = _.findIndex(articles, ["id", user_article])
+        if (index > -1) {
+            articles[index].user_id = user.id
+        }
+    })
+})
+
+var obj_users = {}
+
+var obj_articles = {}
+/* articles.forEach(function (article) {
+    //console.log(user.id ,user)
+    if (article.user_id) {
+        if (!obj_users[article.user_id])
+            obj_users[article.user_id] = []
+        obj_users[article.user_id].push(article)
+    }
+}) */
+
+obj_articles = _.groupBy(articles, 'user_id')
+
+
+
+console.log(_.map(Object.keys(obj_articles), (e) => {
+    return obj_articles[e].length+ "-"+e
+}))
+
+var user_id_select = "112"
+
+if (obj_articles[user_id_select]) {
+    console.log(`L'utilisateur ${user_id_select} à acheté `, obj_articles[user_id_select].length, "article(s)",`(${_.map(obj_articles[user_id_select], 'name').join(',')})` )
+}
+else {
+    console.log(`L'utilisateur ${user_id_select} n'a rien acheté.`)
+}
+
+
+
+//console.log(articles)
